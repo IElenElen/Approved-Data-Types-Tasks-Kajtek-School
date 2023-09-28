@@ -37,6 +37,14 @@
             Litera = 'C';
             Console.WriteLine("C; B; A");
 
+            //Kolejna próba dla zad nr 2:
+
+            char A = 'A';
+            char B = 'B';
+            char C = 'C';
+            Console.WriteLine(@"Zmienne w kolejności zadeklarowanej: A, B, C");
+            Console.WriteLine(@"Zmienne w kolejności odwrotnej: C, B, A");
+
             Console.WriteLine("Task nr 3");
             //3 do poprawy
             //Napisz program, który na podstawie podanej szerokości i długości prostokąta wyliczy długość przekątnej.
@@ -85,7 +93,8 @@
             string HeightCm = "165";
             double Height = double.Parse(HeightCmInput);
             Console.WriteLine("Wzrost w cm: ");
-
+            Console.WriteLine("Naciśnij dowolny klawisz, aby zakończyć");
+            Console.ReadKey();
 
             Console.WriteLine("Podaj wagę w kg");
             string WeightKgInput = Console.ReadLine();
