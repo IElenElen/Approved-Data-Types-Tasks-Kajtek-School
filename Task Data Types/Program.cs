@@ -7,13 +7,14 @@ namespace Task_Data_Types
         static void Main(string[] args)
         {
             Console.WriteLine("Task Data Types");
+            //Najnowsze wersje rozwiązań - na poczatku po nr zadania.
 
             Console.WriteLine("Task nr 1");
             //Stwórz program, w którym zadeklarujesz zmienne dotyczące danych pracownika firmy. Dane to:
             //Imię, Nazwisko, Wiek, płeć (m lub k), Pesel, numer pracownika.
             //Zadeklaruj zmienne odpowiednich typów, które mogą przetrzymywać te informacje.
 
-            //Podejście nr 2 do zadania nr 1:
+            //Podejście nr 2 do zadania nr 1 - od razu nadanie wartości i poprawa na camelCase:
             string name = "Jan";
             Console.WriteLine(name);
             string surname = "Kowalski";
@@ -51,7 +52,7 @@ namespace Task_Data_Types
             //Napisz program, w którym stworzysz 3 zmienne z jedną literą,
             //a nastepnie wypiszesz je w odwrotnej kolejności niż zostały zadeklarowane.
 
-            //Podejście nr 3 do zad nr 2:
+            //Podejście nr 3 do zad nr 2 - wyraźne zaznaczenie nazwy i wartości (rozróżnienie):
             char letterA = 'A';
             char letterB = 'B';
             char letterC = 'C';
@@ -75,16 +76,18 @@ namespace Task_Data_Types
             //i długości prostokąta wyliczy długość przekątnej.
             //Aby obliczyć kwadrat liczby użyj metody Math.Pow().
 
-            //Próba nr 2 do zad nr 3:
+            //Próba nr 3 do zad nr 3 - poprawa na camelCase,
+            //w 1 podejściu brak wyświetlenia dla Diagonal po uruchomieniu konsoli.
+            //Jeżeli 2 próba zła, to jak to naprawić?
             Console.WriteLine("Zadanie nr 3");
             Console.WriteLine("Podaj szerokość prostokąta w cm");
-            double Width = Convert.ToDouble(Console.ReadLine());
+            double width = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Podaj długość prostokąta w cm");
-            double Lenght = Convert.ToDouble(Console.ReadLine());
-            double SquareWidth = Math.Pow(Width, 2);
-            double SquareLength = Math.Pow(Lenght, 2);
-            double Diagonal = Math.Sqrt(SquareWidth + SquareLength);
-            Console.WriteLine($"Długość przekątnej wynosi: w {Diagonal} cm");
+            double lenght = Convert.ToDouble(Console.ReadLine());
+            double squareWidth = Math.Pow(width, 2);
+            double squareLength = Math.Pow(lenght, 2);
+            double diagonal = Math.Sqrt(squareWidth + squareLength);
+            Console.WriteLine($"Długość przekątnej wynosi: w {diagonal} cm");
 
             //Pierwsza próba zad nr 3:
             Console.WriteLine("Zadanie nr 3");
@@ -114,6 +117,42 @@ namespace Task_Data_Types
             //imię, nazwisko, numer tel, adres email, wzrost, waga, itp
             //i spróbuj przekonwertować odpowiedź do odpowiedniego typu danych używając metody:
             //typDanych.Parse(odpowiedźOdUżytkownika).
+
+            //Podejście nr 3 do zad nr 5 tj. TryParse i decimal dla kursu walut
+            Console.WriteLine("Podaj imię");
+            string nameUser = Console.ReadLine();
+            Console.WriteLine($"Twoje imię to: {nameUser}");
+
+            Console.WriteLine("Podaj nazwisko");
+            string surnameUser = Console.ReadLine();
+            Console.WriteLine($"Twoje nazwisko to: {surnameUser}");
+
+            Console.WriteLine("Podaj numer tel i adres email");
+            string telefonNumberAndEmail = Console.ReadLine();
+            Console.WriteLine($"Twój nr telefonu i email to: {telefonNumberAndEmail}");
+
+            Console.WriteLine("Podaj wzrost w cm");
+            string heightCmInput = Console.ReadLine();
+            double height;
+            double.TryParse(heightCmInput, out height);
+            string heightCm = $"Wzrost w cm: {heightCmInput}";
+            Console.WriteLine($"Twój wzrost w cm: {heightCm}");
+
+            Console.WriteLine("Podaj wagę w kg");
+            string weightKgInput = Console.ReadLine();
+            double weight;
+            double.TryParse(weightKgInput, out weight);
+            string weightKg = $"Waga w kg: {weightKgInput}";
+            Console.WriteLine($"Twoja Waga w kilogramach: {weightKg}");
+
+            Console.WriteLine("Podaj dzisiejszy średni kurs walut dla eur - pln z 4 miejscami po przecinku");
+            string exchangeRate = Console.ReadLine();
+            decimal rate;
+            decimal.TryParse(exchangeRate, out rate);
+            string exchangeRateToday = $"Kurs eur-pln {exchangeRate}";
+            Console.WriteLine($"Kurs dzisiejszy średni eur - pln: {exchangeRateToday}");
+            return;
+
 
             //Podejście nr 2 do zad nr 5:
             Console.WriteLine("Podaj imię");
