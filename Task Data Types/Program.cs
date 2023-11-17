@@ -6,7 +6,7 @@ namespace Task_Data_Types
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Task Data Types");
+            Console.WriteLine("Approved Task Data Types");
 
             Console.WriteLine("Task nr 1");
             //Stwórz program, w którym zadeklarujesz zmienne dotyczące danych pracownika firmy. Dane to:
@@ -53,6 +53,7 @@ namespace Task_Data_Types
             //Napisz program, w którym stworzysz 2 zmienne liczbowe oraz jedną tekstową,
             //a nastepnie przypiszesz im następujące wartości: 
             //a. 10 b. Szkoła Dotneta c. 12,5. Pamiętaj o użyciu poprawnych typów danych.
+
             int a = 10;
             Console.WriteLine(a);
             string text = "Szkoła Dotneta";
