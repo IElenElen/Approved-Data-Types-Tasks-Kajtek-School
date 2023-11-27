@@ -83,23 +83,19 @@ namespace Task_Data_Types
             string heightCmInput = Console.ReadLine();
             double height;
             double.TryParse(heightCmInput, out height);
-            string heightCm = $"Wzrost w cm: {heightCmInput}";
-            Console.WriteLine($"Twój wzrost w cm: {heightCm}");
+            Console.WriteLine($"Twój wzrost w cm: {height}");
 
             Console.WriteLine("Podaj wagę w kg");
             string weightKgInput = Console.ReadLine();
             double weight;
             double.TryParse(weightKgInput, out weight);
-            string weightKg = $"Waga w kg: {weightKgInput}";
-            Console.WriteLine($"Twoja Waga w kilogramach: {weightKg}");
+            Console.WriteLine($"Twoja Waga w kilogramach: {weight}");
 
             Console.WriteLine("Podaj dzisiejszy średni kurs walut dla eur - pln z 4 miejscami po przecinku");
             string exchangeRate = Console.ReadLine();
             decimal rate;
             decimal.TryParse(exchangeRate, out rate);
-            string exchangeRateToday = $"Kurs eur-pln {exchangeRate}";
-            Console.WriteLine($"Kurs dzisiejszy średni eur - pln: {exchangeRateToday}");
-            return;
+            Console.WriteLine($"Kurs dzisiejszy średni eur - pln: {rate}");
         }
     }
 }
