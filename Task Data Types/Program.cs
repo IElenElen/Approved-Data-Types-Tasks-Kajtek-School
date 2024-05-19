@@ -68,31 +68,31 @@ namespace Task_Data_Types
             //typDanych.Parse(odpowiedźOdUżytkownika).
 
             Console.WriteLine("Podaj imię");
-            string nameUser = Console.ReadLine();
+            string? nameUser = Console.ReadLine();
             Console.WriteLine($"Twoje imię to: {nameUser}");
 
             Console.WriteLine("Podaj nazwisko");
-            string surnameUser = Console.ReadLine();
+            string? surnameUser = Console.ReadLine();
             Console.WriteLine($"Twoje nazwisko to: {surnameUser}");
 
             Console.WriteLine("Podaj numer tel i adres email");
-            string telefonNumberAndEmail = Console.ReadLine();
+            string? telefonNumberAndEmail = Console.ReadLine();
             Console.WriteLine($"Twój nr telefonu i email to: {telefonNumberAndEmail}");
 
             Console.WriteLine("Podaj wzrost w cm");
-            string heightCmInput = Console.ReadLine();
+            string? heightCmInput = Console.ReadLine();
             double height;
             double.TryParse(heightCmInput, out height);
             Console.WriteLine($"Twój wzrost w cm: {height}");
 
             Console.WriteLine("Podaj wagę w kg");
-            string weightKgInput = Console.ReadLine();
+            string? weightKgInput = Console.ReadLine();
             double weight;
             double.TryParse(weightKgInput, out weight);
             Console.WriteLine($"Twoja Waga w kilogramach: {weight}");
 
             Console.WriteLine("Podaj dzisiejszy średni kurs walut dla eur - pln z 4 miejscami po przecinku");
-            string exchangeRate = Console.ReadLine();
+            string? exchangeRate = Console.ReadLine();
             decimal rate;
             decimal.TryParse(exchangeRate, out rate);
             Console.WriteLine($"Kurs dzisiejszy średni eur - pln: {rate}");
